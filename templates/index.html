@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>URL Classifier</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 50px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: inline-block;
+        }
+        input[type=text] {
+            width: 300px;
+            height: 40px;
+            padding: 5px;
+            margin-top: 10px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+        }
+        input[type=submit] {
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type=submit]:hover {
+            background-color: #4cae4c;
+        }
+        .prediction {
+            font-weight: bold;
+            color: #31708f;
+            margin-top: 20px;
+        }
+        ul {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>URL Classifier</h1>
+
+        <form method="post">
+            URL: <input type="text" name="url">
+            <input type="submit" value="Predict">
+        </form>
+
+        {% if prediction %}
+            <p class="prediction">Prediction: {{ prediction }}</p>
+        {% endif %}
+
+        <h2>Team Members</h2>
+        <ul>
+            <li>Utsab Dhakal</li>
+            <li>And more</li>
+            <!-- Add more team members here -->
+        </ul>
+    </div>
+</body>
+</html>
